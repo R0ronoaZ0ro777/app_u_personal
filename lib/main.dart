@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'screen/horarios.dart';
+import 'screen/promNotas.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,8 +13,31 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+      theme: ThemeData.dark().copyWith(
+        colorScheme: ThemeData.dark().colorScheme.copyWith(
+          primary: Colors.tealAccent.shade200,
+          secondary: Colors.tealAccent.shade100,
+        ),
+        primaryColor: Colors.tealAccent.shade200,
+        scaffoldBackgroundColor: const Color(0xFF0F1720), // very dark blue-gray
+        cardColor: const Color(0xFF111827), // slightly lighter for cards
+        dialogBackgroundColor: const Color(0xFF0B1220),
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Color(0xFF0B1220),
+          foregroundColor: Colors.white,
+          elevation: 1,
+        ),
+        floatingActionButtonTheme: const FloatingActionButtonThemeData(
+          backgroundColor: Color(0xFF14B8A6),
+          foregroundColor: Colors.white,
+        ),
+        inputDecorationTheme: InputDecorationTheme(
+          filled: true,
+          fillColor: const Color(0xFF071018),
+          hintStyle: TextStyle(color: Colors.grey[400]),
+          border: OutlineInputBorder(borderRadius: BorderRadius.circular(8), borderSide: BorderSide.none),
+          contentPadding: const EdgeInsets.symmetric(horizontal: 12, vertical: 14),
+        ),
       ),
       home: const MyHomePage(),
     );
@@ -26,7 +51,7 @@ class MyHomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        backgroundColor: Colors.blueAccent,
+        backgroundColor: const Color.fromARGB(255, 0, 6, 15),
               foregroundColor: Colors.white,
               iconTheme: const IconThemeData(color: Colors.white),
               title: Text(
@@ -48,17 +73,17 @@ class MyHomePage extends StatelessWidget {
         crossAxisSpacing: 16,
         children: [
           _ActionCard(
-              icon: Icons.schedule,
+            icon: Icons.schedule,
             label: 'Horario de clases',
             onTap: () {
-              // Navegar a la pantalla de horario de clases
+              Navigator.of(context).push(MaterialPageRoute(builder: (_) => const Horarios()));
             },
           ),
           _ActionCard(
             icon: Icons.book,
-            label: 'Accion 2',
+            label: 'Promedio de Notas',
             onTap: () {
-              // Navegar a la pantalla de accion 2
+              Navigator.of(context).push(MaterialPageRoute(builder: (_) => const PromNotas()));
             },
           ),
           _ActionCard(

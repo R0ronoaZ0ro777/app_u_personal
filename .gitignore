@@ -1,0 +1,123 @@
+# Flutter / Dart
+
+# Built files
+.dart_tool/
+build/
+
+# Android
+/android/.gradle/
+/android/app/**/local.properties
+/android/**/local.properties
+/android/local.properties
+
+# iOS
+/ios/Pods/
+/ios/Flutter/Flutter.framework
+/ios/Flutter/Flutter.podspec
+/ios/Flutter/engine/
+
+# Xcode
+*.xcworkspace
+*.xcuserdata/
+*.xcodeproj/project.xcworkspace/
+*.xccheckout
+*.xcuserstate
+
+# Generated files
+**/GeneratedPluginRegistrant.*
+**/flutter_export_environment.sh
+
+# Flutter plugins
+.flutter-plugins
+.flutter-plugins-dependencies
+
+# Packages
+.packages
+
+# Pub cache (optional)
+.pub-cache/
+
+# Coverage and reports
+coverage/
+*.lcov
+
+# IDEs and editors
+.idea/
+*.iml
+*.ipr
+*.iws
+.vscode/
+
+# Misc
+*.log
+*.tmp
+*.swp
+.DS_Store
+
+# Resource files created by Flutter tooling
+.flutter-plugins
+.flutter-plugins-dependencies
+
+# Windows
+build/windows/runner/Release/*
+build/windows/runner/Debug/*
+
+# Linux
+build/linux/**
+
+# macOS
+build/macos/**
+
+# Web build
+build/web/
+
+# Local environment and secrets
+.env
+.env.*
+
+# Do NOT ignore pubspec.lock for apps. If this is a package, consider ignoring it.
+# Miscellaneous
+*.class
+*.log
+*.pyc
+*.swp
+.DS_Store
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
+
+# IntelliJ related
+*.iml
+*.ipr
+*.iws
+.idea/
+
+# The .vscode folder contains launch configuration and tasks you configure in
+# VS Code which you may wish to be included in version control, so this line
+# is commented out by default.
+#.vscode/
+
+# Flutter/Dart/Pub related
+**/doc/api/
+**/ios/Flutter/.last_build_id
+.dart_tool/
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+/build/
+/coverage/
+
+# Symbolication related
+app.*.symbols
+
+# Obfuscation related
+app.*.map.json
+
+# Android Studio will place build artifacts here
+/android/app/debug
+/android/app/profile
+/android/app/release
